@@ -12,7 +12,7 @@ Built to support:
 
 ## 🚀 Features
 
-- 🔁 Evaluate multiple HuggingFace transformer models (e.g., `gpt2`, `EleutherAI/gpt-neo-125M`)
+- 🤗 Evaluate multiple HuggingFace transformer models (e.g., `gpt2`, `EleutherAI/gpt-neo-125M`)
 - 📊 Benchmark performance across prompt variants
 - 🧪 Calculate metrics: BLEU, ROUGE, Cosine Similarity
 - 📁 Export results to CSV
