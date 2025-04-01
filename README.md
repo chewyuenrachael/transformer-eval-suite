@@ -2,6 +2,9 @@
 
 A developer-friendly toolkit to **compare, benchmark, and visualize the performance** of different transformer models on tasks like summarization and question answering.
 
+[🚀 **Live Demo**](https://transformer-eval-suite.streamlit.app/)  
+_Explore model comparisons directly in your browser via Streamlit_
+
 Built to support:
 - Research validation
 - Prompt sensitivity analysis
