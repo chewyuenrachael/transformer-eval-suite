@@ -1,0 +1,90 @@
+[
+  {
+    "model": "gpt2",
+    "results": [
+      {
+        "prompt_variant": 0,
+        "input": "Summarize the following text:\nExplain the theory of relativity.",
+        "output": "Summarize the following text:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws",
+        "latency": 0.4541308879852295,
+        "num_tokens": 65,
+        "cosine_similarity": 0.788597822189331,
+        "bleu": 0.10406600737539028,
+        "rouge": {
+          "rouge1": 0.23076923076923078,
+          "rougeL": 0.20512820512820512
+        }
+      },
+      {
+        "prompt_variant": 1,
+        "input": "Can you provide a summary of:\nExplain the theory of relativity.",
+        "output": "Can you provide a summary of:\nExplain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of",
+        "latency": 0.37740421295166016,
+        "num_tokens": 65,
+        "cosine_similarity": 0.5824229717254639,
+        "bleu": 2.9984422755741665e-155,
+        "rouge": {
+          "rouge1": 0.19178082191780824,
+          "rougeL": 0.1643835616438356
+        }
+      },
+      {
+        "prompt_variant": 2,
+        "input": "TL;DR:\nExplain the theory of relativity.",
+        "output": "TL;DR:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a",
+        "latency": 0.3884749412536621,
+        "num_tokens": 62,
+        "cosine_similarity": 0.8467622995376587,
+        "bleu": 0.11247951467712404,
+        "rouge": {
+          "rouge1": 0.24,
+          "rougeL": 0.21333333333333332
+        }
+      }
+    ]
+  },
+  {
+    "model": "EleutherAI/gpt-neo-125M",
+    "results": [
+      {
+        "prompt_variant": 0,
+        "input": "Summarize the following text:\nExplain the theory of relativity.",
+        "output": "Summarize the following text:\nExplain the theory of relativity.\n\nThe theory of relativity is a theory of the universe that is based on the idea that the universe is a collection of particles, each of which is a particle of the universe. The universe is a collection of particles, each of which is a",
+        "latency": 1.2257919311523438,
+        "num_tokens": 65,
+        "cosine_similarity": 0.665814995765686,
+        "bleu": 0.10604910825383697,
+        "rouge": {
+          "rouge1": 0.23376623376623373,
+          "rougeL": 0.20779220779220778
+        }
+      },
+      {
+        "prompt_variant": 1,
+        "input": "Can you provide a summary of:\nExplain the theory of relativity.",
+        "output": "Can you provide a summary of:\nExplain the theory of relativity.\n\nA:\n\nThe Einstein-Podolsky-Rosen (EPR) equation is a special case of the Einstein-Podolsky-Rosen (EPR) equation.  The Einstein-Podolsky-Rosen",
+        "latency": 0.4485890865325928,
+        "num_tokens": 65,
+        "cosine_similarity": 0.512108325958252,
+        "bleu": 5.393656060765416e-155,
+        "rouge": {
+          "rouge1": 0.32142857142857145,
+          "rougeL": 0.25
+        }
+      },
+      {
+        "prompt_variant": 2,
+        "input": "TL;DR:\nExplain the theory of relativity.",
+        "output": "TL;DR:\nExplain the theory of relativity.\n\nA:\n\nThe Einstein-Hilbert action is the same as the Einstein-Hilbert action for the Einstein-Hilbert action. \nThe Einstein-Hilbert action is the same as the Einstein-H",
+        "latency": 0.47170114517211914,
+        "num_tokens": 62,
+        "cosine_similarity": 0.534403920173645,
+        "bleu": 4.1070964670347465e-155,
+        "rouge": {
+          "rouge1": 0.3050847457627119,
+          "rougeL": 0.23728813559322037
+        }
+      }
+    ]
+  }
+]

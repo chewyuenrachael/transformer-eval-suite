@@ -1,0 +1,41 @@
+[
+  {
+    "prompt_variant": 0,
+    "input": "Summarize the following text:\nExplain the theory of relativity.",
+    "output": "Summarize the following text:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws",
+    "latency": 0.4541308879852295,
+    "num_tokens": 65,
+    "cosine_similarity": 0.788597822189331,
+    "bleu": 0.10406600737539028,
+    "rouge": {
+      "rouge1": 0.23076923076923078,
+      "rougeL": 0.20512820512820512
+    }
+  },
+  {
+    "prompt_variant": 1,
+    "input": "Can you provide a summary of:\nExplain the theory of relativity.",
+    "output": "Can you provide a summary of:\nExplain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of",
+    "latency": 0.37740421295166016,
+    "num_tokens": 65,
+    "cosine_similarity": 0.5824229717254639,
+    "bleu": 2.9984422755741665e-155,
+    "rouge": {
+      "rouge1": 0.19178082191780824,
+      "rougeL": 0.1643835616438356
+    }
+  },
+  {
+    "prompt_variant": 2,
+    "input": "TL;DR:\nExplain the theory of relativity.",
+    "output": "TL;DR:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a",
+    "latency": 0.3884749412536621,
+    "num_tokens": 62,
+    "cosine_similarity": 0.8467622995376587,
+    "bleu": 0.11247951467712404,
+    "rouge": {
+      "rouge1": 0.24,
+      "rougeL": 0.21333333333333332
+    }
+  }
+]

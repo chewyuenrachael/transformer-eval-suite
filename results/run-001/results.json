@@ -1,0 +1,23 @@
+[
+  {
+    "prompt_variant": 0,
+    "input": "Summarize the following text:\nExplain the theory of relativity.",
+    "output": "Summarize the following text:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws of motion of the universe. It is a theory of the laws",
+    "latency": 0.5037569999694824,
+    "num_tokens": 65
+  },
+  {
+    "prompt_variant": 1,
+    "input": "Can you provide a summary of:\nExplain the theory of relativity.",
+    "output": "Can you provide a summary of:\nExplain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity.\nExplain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of relativity. Explain the theory of",
+    "latency": 0.5400540828704834,
+    "num_tokens": 65
+  },
+  {
+    "prompt_variant": 2,
+    "input": "TL;DR:\nExplain the theory of relativity.",
+    "output": "TL;DR:\nExplain the theory of relativity.\nThe theory of relativity is a theory of the laws of motion of the universe. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a theory of the laws of physics. It is a",
+    "latency": 0.37706589698791504,
+    "num_tokens": 62
+  }
+]
