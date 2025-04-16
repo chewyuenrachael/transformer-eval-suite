@@ -8,3 +8,6 @@ tqdm
 datasets
 scikit-learn
 click
+kaleido
+streamlit
+plotly
