@@ -1,0 +1,26 @@
+[
+  {
+    "prompt_variant": 0,
+    "input": "Summarize the following text:\nExplain the theory of relativity.",
+    "output": "The theory of relativity, formulated by Albert Einstein, states that the laws of physics are the same for all observers, regardless of their relative motion. It is based on the idea that space and time are intertwined in a four-dimensional continuum known as spacetime. The theory has two main components: the general theory of relativity, which describes gravity as the curvature of spacetime caused by mass and energy, and the special theory of relativity, which deals with the behavior of objects moving at speeds close to the speed of light.",
+    "latency": 1.346325159072876,
+    "num_tokens": 129,
+    "model_type": "openai"
+  },
+  {
+    "prompt_variant": 1,
+    "input": "Can you provide a summary of:\nExplain the theory of relativity.",
+    "output": "The theory of relativity, proposed by Albert Einstein in the early 20th century, fundamentally changed the way we understand the universe. There are two main components to the theory: special relativity and general relativity.\n\nSpecial relativity states that the laws of physics are the same for all observers, regardless of their relative motion. This means that measurements of time, distance, and mass can vary depending on the observer's frame of reference. The theory also introduced the concept of the constant speed of light, which is the same for all observers.\n\nGeneral relativity, on the other hand, describes gravity as the curvature of spacetime caused by mass and energy. According to this theory, massive objects like planets and stars warp the fabric of spacetime, causing other objects to move along curved paths. This explains the force of gravity as a result of these curved paths rather than a direct attraction between objects.\n\nOverall, the theory of relativity has had a profound impact on our understanding of the universe, leading to new insights into the nature of time, space, and gravity. It has also been confirmed through numerous experiments and observations, solidifying its place as one of the most important theories in modern physics.",
+    "latency": 2.2414228916168213,
+    "num_tokens": 263,
+    "model_type": "openai"
+  },
+  {
+    "prompt_variant": 2,
+    "input": "TL;DR:\nExplain the theory of relativity.",
+    "output": "The theory of relativity, developed by Albert Einstein, states that the laws of physics are the same for all observers, regardless of their relative motion. It consists of two main parts: special relativity, which deals with the relationship between space and time, and general relativity, which describes the force of gravity as a curvature of spacetime caused by mass and energy.",
+    "latency": 0.88832688331604,
+    "num_tokens": 94,
+    "model_type": "openai"
+  }
+]

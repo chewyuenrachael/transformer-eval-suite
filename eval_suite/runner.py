@@ -2,48 +2,58 @@
 
 import torch
 import time
-from eval_suite.models import load_model_and_tokenizer
+from models import load_model_and_tokenizer
 from eval_suite.prompts import get_prompt
 from eval_suite.metrics import compute_cosine_similarity, compute_bleu, compute_rouge
+from models.openai_wrapper import OpenAIModel
+from datasets import load_dataset
 
-def run_eval(model_name, prompts, task_type):
+def load_medical_dataset():
+    dataset = load_dataset("FreedomIntelligence/medical-o1-reasoning-SFT", "en")
+    return dataset["train"]
+
+def run_eval(model_name, prompts, task_type, dataset):
     model, tokenizer = load_model_and_tokenizer(model_name)
     results = []
 
-    # You can customize this reference for your own evaluation task
-    reference = "The theory of relativity is a theory by Einstein explaining how time and space are linked for objects moving at a consistent speed."
-
-    for i, _ in enumerate(prompts):
-        input_text = "Explain the theory of relativity."  # You can swap this out later
+    for i in range(min(len(dataset), len(prompts))):
+        input_text = dataset[i]['Question']
         prompt = get_prompt(task_type, i, input_text)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-        start = time.time()
-        with torch.no_grad():
-            output = model.generate(**inputs, max_new_tokens=50)
-        end = time.time()
+        # === Generation ===
+        if isinstance(model, OpenAIModel):
+            result = model.generate(prompt)
+            output = result["output"]
+            latency = result["latency"]
+            tokens_used = result["tokens_used"]
+        else:
+            inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+            start = time.time()
+            with torch.no_grad():
+                output_tensor = model.generate(**inputs, max_new_tokens=50)
+            end = time.time()
+            output = tokenizer.decode(output_tensor[0], skip_special_tokens=True)
+            latency = end - start
+            tokens_used = output_tensor.shape[1]
 
-        generated = tokenizer.decode(output[0], skip_special_tokens=True)
-        latency = end - start
+        # === Evaluation ===
+        expected_output = dataset[i]['Response']
 
-        # 🧪 Evaluation metrics
-        cos_sim = compute_cosine_similarity(generated, reference)
-        bleu = compute_bleu(generated, reference)
-        rouge = compute_rouge(generated, reference)
+        bleu = compute_bleu(expected_output, output)
+        rouge = compute_rouge(expected_output, output)
+        cosine = compute_cosine_similarity(expected_output, output)
 
+        # === Result Object ===
         results.append({
             "prompt_variant": i,
             "input": prompt,
-            "output": generated,
+            "output": output,
             "latency": float(latency),
-            "num_tokens": int(output.shape[1]),
-            "cosine_similarity": float(cos_sim),
+            "num_tokens": int(tokens_used),
+            "cosine_similarity": float(cosine),
             "bleu": float(bleu),
-            "rouge": {
-                "rouge1": float(rouge["rouge1"].fmeasure),
-                "rougeL": float(rouge["rougeL"].fmeasure)
-            }
+            "rouge": rouge,
+            "model_type": "openai" if isinstance(model, OpenAIModel) else "huggingface"
         })
-
 
     return results

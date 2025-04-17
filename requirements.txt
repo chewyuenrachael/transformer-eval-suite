@@ -8,6 +8,11 @@ tqdm
 datasets
 scikit-learn
 click
+<<<<<<< HEAD
 kaleido
 streamlit
 plotly
+=======
+openai>=1.0.0
+python-dotenv
+>>>>>>> ab950ea (Add OpenAI GPT-4o integration and medical dataset evaluation pipeline)

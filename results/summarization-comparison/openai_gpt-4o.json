@@ -1,0 +1,68 @@
+[
+  {
+    "prompt_variant": 0,
+    "input": "Summarize the following text:\nA 61-year-old woman with a long history of involuntary urine loss during activities like coughing or sneezing but no leakage at night undergoes a gynecological exam and Q-tip test. Based on these findings, what would cystometry most likely reveal about her residual volume and detrusor contractions?",
+    "output": "The text describes a 61-year-old woman experiencing stress urinary incontinence, characterized by involuntary urine loss during activities that increase abdominal pressure, such as coughing or sneezing, but without leakage at night. A gynecological exam and Q-tip test were conducted. Cystometry in this case would most likely reveal a normal residual volume and an absence of involuntary detrusor contractions, as stress urinary incontinence typically involves urethral sphincter weakness rather than issues with bladder contractions.",
+    "latency": 3.5257320404052734,
+    "num_tokens": 175,
+    "cosine_similarity": 0.8147042989730835,
+    "bleu": 0.14758641221510593,
+    "rouge": {
+      "rouge1": [
+        0.5689655172413793,
+        0.4342105263157895,
+        0.49253731343283585
+      ],
+      "rougeL": [
+        0.3620689655172414,
+        0.27631578947368424,
+        0.31343283582089554
+      ]
+    },
+    "model_type": "openai"
+  },
+  {
+    "prompt_variant": 1,
+    "input": "Can you provide a summary of:\nA 45-year-old man presents with symptoms including a wide-based gait, a blank facial expression, hallucinations, memory issues, a resting tremor that resolves with movement, and bradykinesia. Based on these clinical findings, what is most likely to be observed in the histological specimen of his brain?",
+    "output": "Based on the clinical symptoms presented, the 45-year-old man is likely suffering from a neurodegenerative disorder, specifically Parkinson's disease. The symptoms supporting this diagnosis include a resting tremor that resolves with movement, bradykinesia, a blank facial expression (often referred to as hypomimia or masked facies), and memory issues. The wide-based gait and hallucinations can also be associated with Parkinson's disease, although they are not classic symptoms.\n\nIn Parkinson's disease, the most characteristic histological finding in the brain is the presence of Lewy bodies. Lewy bodies are abnormal aggregates of protein, primarily composed of alpha-synuclein, found in the cytoplasm of neurons. Specifically, they are often found in the substantia nigra, a region of the brain that undergoes degeneration in Parkinson's disease. The loss of dopaminergic neurons in this area leads to the motor symptoms observed in the patient.\n\nTherefore, in a histological specimen of this patient's brain, one would most likely observe the presence of Lewy bodies in the substantia nigra.",
+    "latency": 8.874574661254883,
+    "num_tokens": 297,
+    "cosine_similarity": 0.8842401504516602,
+    "bleu": 0.19996478515421867,
+    "rouge": {
+      "rouge1": [
+        0.8269230769230769,
+        0.5088757396449705,
+        0.63003663003663
+      ],
+      "rougeL": [
+        0.5192307692307693,
+        0.31952662721893493,
+        0.39560439560439564
+      ]
+    },
+    "model_type": "openai"
+  },
+  {
+    "prompt_variant": 2,
+    "input": "TL;DR:\nA patient with psoriasis was treated with systemic steroids, and upon discontinuation of the treatment, developed generalized pustules all over the body. What is the most likely cause of this condition?",
+    "output": "The scenario described is most likely a case of generalized pustular psoriasis (GPP), which can occur as a rebound effect following the withdrawal of systemic corticosteroids. When systemic steroids are used to treat psoriasis, they can initially improve the symptoms; however, abrupt discontinuation or withdrawal can lead to a flare-up or exacerbation of the condition. This exacerbation can present as generalized pustular psoriasis, characterized by the appearance of widespread pustules. Therefore, the most likely cause of the generalized pustules in this patient is the withdrawal of systemic steroids, leading to a flare of pustular psoriasis.",
+    "latency": 2.775665044784546,
+    "num_tokens": 167,
+    "cosine_similarity": 0.904151201248169,
+    "bleu": 0.11749919199516683,
+    "rouge": {
+      "rouge1": [
+        0.5196078431372549,
+        0.5520833333333334,
+        0.5353535353535354
+      ],
+      "rougeL": [
+        0.3137254901960784,
+        0.3333333333333333,
+        0.32323232323232326
+      ]
+    },
+    "model_type": "openai"
+  }
+]
