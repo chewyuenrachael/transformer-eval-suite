@@ -84,12 +84,32 @@ python cli.py --models openai/gpt-4o --task summarization
 
 ## 🧪 Evaluation Metrics
 
-| Metric | Description |
-|--------|-------------|
-| BLEU | Precision of n-grams |
-| ROUGE-1 | Overlap of unigrams |
-| ROUGE-L | Longest common subsequence |
-| Cosine | Semantic similarity via `sentence-transformers` |
+The suite evaluates model outputs across multiple complementary metrics to provide a robust and interpretable understanding of performance:
+
+| **Metric** | **What It Measures** | **How It's Computed** | **When It's Useful** |
+|:-----------|:---------------------|:----------------------|:---------------------|
+| **BLEU** (Bilingual Evaluation Understudy) | Precision of n-grams between model output and reference text | Counts overlapping 1–4 word sequences (n-grams) between generated and reference text, penalizing short outputs | Strong indicator for translation and summarization tasks requiring literal phrasing |
+| **ROUGE-1** | Recall of unigrams (single words) between model output and reference | Measures the overlap of individual words; higher recall suggests more complete coverage of key concepts | Good for summarization or generation tasks where key term coverage matters |
+| **ROUGE-L** | Recall based on the Longest Common Subsequence (LCS) | Finds the longest ordered sequence of matching words, focusing on fluency and preservation of major ideas | Useful for evaluating answer completeness and coherence in open-ended generation |
+| **Cosine Similarity** | Semantic similarity between embeddings of model output and reference text | Computes embeddings with `sentence-transformers` and calculates the cosine of the angle between them | Captures meaning beyond exact word matches — ideal for assessing paraphrasing or flexible phrasing |
+
+---
+
+## Quick Intuition for each Metric
+
+- **BLEU**: _"Did the model use the exact right words?"_ (precision)
+- **ROUGE-1**: _"Did the model mention all the important words?"_ (recall)
+- **ROUGE-L**: _"Did the model preserve the logical flow of information?"_
+- **Cosine Similarity**: _"Did the model capture the **meaning**, even if the wording changed?"_
+
+---
+
+## 📚 Metric Details
+
+- **BLEU** is stricter — good for tasks where wording matters.
+- **ROUGE** is more forgiving — good for tasks where completeness matters.
+- **Cosine Similarity** measures _semantic fidelity_ — critical when **paraphrasing is acceptable**.
+- Metrics are **automatically normalized** and **rounded** for easier comparison across models and prompts.
 
 ---
 
