@@ -166,6 +166,18 @@ Then open `http://localhost:8501`
 
 ---
 
+### 📈 How to Interpret the Evaluation Results
+
+This table summarizes how the `openai/gpt-4o` model performed across **three different prompt variants** on a summarization task. Each row shows evaluation scores for a particular prompt formulation.
+
+* **Cosine Sim**: Measures semantic similarity between the model output and the reference using sentence embeddings. Higher values (closer to 1.0) indicate better semantic alignment.
+* **BLEU**: Captures **precision** of n-gram overlap. In this example, Prompt 1 yields the highest BLEU score (0.200), indicating good short-span token matching.
+* **ROUGE-1 / ROUGE-L**: Capture **recall** of unigrams and longest common subsequences, respectively. Prompt 1 again performs best on both metrics, suggesting it elicits more complete summaries.
+
+➡️ **Key takeaway**: Prompt 1 performs best overall across all metrics, indicating it's the most effective prompt variant for this model on this dataset. These results show how prompt phrasing can significantly affect output quality, even for the same model.
+
+---
+
 ## 🧠 Prompt Templates
 
 The suite tests each model on prompt styles like:
